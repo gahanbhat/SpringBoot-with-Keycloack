@@ -2,11 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Welcome to Food Ordering</title>
+    <script src=" http://localhost:35829/livereload.js"></script>
   </head>
   <body>
     <h1>Welcome to Food Ordering</h1>
     <p>
       Click <a th:href="@{/menu}">here</a> to view the menu (requires login).
+    </p>
+    <p>
+      Click <a th:href="@{/dineout}">here</a> to view the dine-out options
+      (requires login).
     </p>
   </body>
 </html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Food Ordering Menu</title>
+  </head>
+  <body>
+    <h1>Welcome to the Dine-Out, <span th:text="${username}"></span>!</h1>
+    <p>Here's the list of restuarants (placeholder):</p>
+    <ul>
+      <li>ShivSagar</li>
+      <li>Paakashala</li>
+      <li>Desi Masala</li>
+    </ul>
+    <form th:action="@{/logout}" method="post">
+      <input type="submit" value="Logout" />
+    </form>
+  </body>
+</html>

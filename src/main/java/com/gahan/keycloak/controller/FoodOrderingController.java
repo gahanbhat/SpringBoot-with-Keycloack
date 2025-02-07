@@ -38,4 +38,14 @@ public class FoodOrderingController {
         }
         return "menu";
     }
+
+    @GetMapping("/dineout")
+    public String dine(@AuthenticationPrincipal OidcUser user, Model model) {
+        if (user != null) {
+            model.addAttribute("username", user.getPreferredUsername());
+        } else {
+            return "redirect:/";  // Redirect to home if not authenticated
+        }
+        return "dineout";
+    }
 }
